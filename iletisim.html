@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotorDünyası - İletişim</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #e62e2d;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .navbar {
+            background-color: var(--dark-color);
+        }
+        
+        .nav-link {
+            color: white;
+            margin-right: 15px;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background-color: #d12120;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        .contact-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/300') center/cover no-repeat;
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .contact-form {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .contact-info {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        
+        .info-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .form-label {
+            font-weight: 500;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(0, 86, 179, 0.25);
+        }
+        
+        .map-container {
+            height: 400px;
+            margin-bottom: 30px;
+        }
+        
+        .radio-group, .checkbox-group {
+            margin-bottom: 1rem;
+        }
+        
+        .custom-radio, .custom-checkbox {
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header - div 1 -->
+    <div class="container-fluid p-0">
+        <!-- Navbar - div 2 -->
+        <div class="navbar navbar-expand-lg navbar-dark sticky-top">
+            <div class="container">
+                <!-- Logo - div 3 -->
+                <div class="navbar-brand">
+                    <span class="fw-bold">Motor</span><span class="text-danger">Dünyası</span>
+                </div>
+                
+                <!-- Hamburger button - div 4 -->
+                <div class="navbar-toggler-wrapper">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                
+                <!-- Nav links - div 5 -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><span class="menu-text">Ana Sayfa</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#modeller"><span class="menu-text">Modeller</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#karsilastirma"><span class="menu-text">Karşılaştırma</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#hakkimizda"><span class="menu-text">Hakkımızda</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="iletisim.html"><span class="menu-text">İletişim</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Header - div 6 -->
+        <div class="contact-header text-center">
+            <h1><span class="display-4 fw-bold">Bize</span> <span class="display-4 fw-bold text-danger">Ulaşın</span></h1>
+            <p class="lead"><span class="subtitle">Sorularınız, önerileriniz veya test sürüşü talepleriniz için bizimle iletişime geçin</span></p>
+        </div>
+    </div>
+    
+    <!-- Main Content - div 7 -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Contact Form - div 8 -->
+            <div class="col-lg-8 mb-4">
+                <div class="contact-form">
+                    <h2 class="mb-4"><span class="form-title">İletişim</span> <span class="text-danger">Formu</span></h2>
+                    
+                    <form id="contactForm">
+                        <!-- Form Row 1 - div 9 -->
+                        <div class="row mb-3">
+                            <!-- Input 1: Text - div 10 -->
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label"><span class="label-text">Ad Soyad</span> <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="name" placeholder="Adınız Soyadınız" required>
+                            </div>
+                            
+                            <!-- Input 2: Email - div 11 -->
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label"><span class="label-text">E-posta</span> <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="ornek@email.com" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Form Row 2 - div 12 -->
+                        <div class="row mb-3">
+                            <!-- Input 3: Tel - div 13 -->
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label"><span class="label-text">Telefon</span></label>
+                                <input type="tel" class="form-control" id="phone" placeholder="05XX XXX XXXX">
+                            </div>
+                            
+                            <!-- Input 4: Select - div 14 -->
+                            <div class="col-md-6 mb-3">
+                                <label for="subject" class="form-label"><span class="label-text">Konu</span> <span class="text-danger">*</span></label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="" selected disabled><span class="option-text">Seçiniz...</span></option>
+                                    <option value="bilgi"><span class="option-text">Bilgi Talebi</span></option>
+                                    <option value="test"><span class="option-text">Test Sürüşü</span></option>
+                                    <option value="satis"><span class="option-text">Satış</span></option>
+                                    <option value="servis"><span class="option-text">Servis</span></option>
+                                    <option value="diger"><span class="option-text">Diğer</span></option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Form Row 3 - div 15 -->
+                        <div class="row mb-3">
+                            <!-- Input 5: Radio Buttons - div 16 -->
+                            <div class="col-12 mb-3">
+                                <label class="form-label"><span class="label-text">İlgilendiğiniz Model</span></label>
+                                <div class="radio-group">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="model" id="model1" value="Thunder 650R">
+                                        <label class="form-check-label" for="model1"><span class="radio-text">Thunder 650R</span></label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="model" id="model2" value="Explorer 900">
+                                        <label class="form-check-label" for="model2"><span class="radio-text">Explorer 900</span></label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="model" id="model3" value="Cruise Master 1200">
+                                        <label class="form-check-label" for="model3"><span class="radio-text">Cruise Master 1200</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Form Row 4 - div 17 -->
+                        <div class="row mb-3">
+                            <!-- Input 6: Checkboxes - div 18 -->
+                            <div class="col-12 mb-3">
+                                <label class="form-label"><span class="label-text">Tercihleriniz</span></label>
+                                <div class="checkbox-group">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="pref1" value="fiyat">
+                                        <label class="form-check-label" for="pref1"><span class="checkbox-text">Fiyat Bilgisi</span></label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="pref2" value="test">
+                                        <label class="form-check-label" for="pref2"><span class="checkbox-text">Test Sürüşü</span></label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="pref3" value="katalog">
+                                        <label class="form-check-label" for="pref3"><span class="checkbox-text">Katalog</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Form Row 5 - div 19 -->
+                        <div class="row mb-3">
+                            <!-- Input 7: Textarea - div 20 -->
+                            <div class="col-12">
+                                <label for="message" class="form-label"><span class="label-text">Mesajınız</span> <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- Form Row 6 - div 21 -->
+                        <div class="row mb-3">
+                            <!-- Input 8: Date - div 22 -->
+                            <div class="col-md-6 mb-3">
+                                <label for="prefDate" class="form-label"><span class="label-text">Tercih Ettiğiniz Tarih</span></label>
+                                <input type="date" class="form-control" id="prefDate">
+                            </div>
+                            
+                            <!-- Input 9: Time - div 23 -->
+                            <div class="col-md-6 mb-3">
+                                <label for="prefTime" class="form-label"><span class="label-text">Tercih Ettiğiniz Saat</span></label>
+                                <input type="time" class="form-control" id="prefTime">
+                            </div>
+                        </div>
+                        
+                        <!-- Form Row 7 - div 24 -->
+                        <div class="row mb-3">
+                            <!-- Input 10: Range - div 25 -->
+                            <div class="col-12 mb-3">
+                                <label for="budget" class="form-label"><span class="label-text">Bütçe Aralığı (₺100,000 - ₺500,000)</span></label>
+                                <input type="range" class="form-range" min="100000" max="500000" step="10000" id="budget" oninput="updateBudgetValue(this.value)">
+                                <p class="text-center" id="budgetValue"><span class="range-value">₺300,000</span></p>
+                            </div>
+                        </div>
+                        
+                        <!-- Input 11: File Upload - div 26 -->
+                        <div class="row mb-3">
+                            <div class="col-12 mb-3">
+                                <label for="fileUpload" class="form-label"><span class="label-text">Dosya Yükle (İsteğe Bağlı)</span></label>
+                                <input type="file" class="form-control" id="fileUpload">
+                                <div class="form-text"><span class="form-help-text">Ehliyetinizin kopyasını yükleyebilirsiniz.</span></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Input 12: Hidden Field - div 27 -->
+                        <input type="hidden" id="source" value="contact_page">
+                        
+                        <!-- Form Row 8 - div 28 -->
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="agreement" required>
+                                    <label class="form-check-label" for="agreement">
+                                        <span class="agreement-text">Kişisel verilerimin işlenmesine ilişkin <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">aydınlatma metnini</a> okudum ve kabul ediyorum.</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Button - div 29 -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">Gönder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Contact Info - div 30 -->
+            <div class="col-lg-4">
+                <div class="contact-info">
+                    <h3 class="mb-4"><span class="info-title">İletişim</span> <span class="text-danger">Bilgileri</span></h3>
+                    
+                    <!-- Info Item 1 - div 31 -->
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h5><span class="info-subtitle">Adres</span></h5>
+                            <p><span class="info-text">Motosiklet Caddesi No:123, <br>Kadıköy/İstanbul</span></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Info Item 2 - div 32 -->
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h5><span class="info-subtitle">Telefon</span></h5>
+                            <p><span class="info-text">+90 212 345 67 89</span></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Info Item 3 - div 33 -->
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h5><span class="info-subtitle">E-posta</span></h5>
+                            <p><span class="info-text">info@motordunyasi.com</span></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Info Item 4 - div 34 -->
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h5><span class="info-subtitle">Çalışma Saatleri</span></h5>
+                            <p><span class="info-text">Pazartesi - Cumartesi: 09:00 - 18:00 <br>Pazar: Kapalı</span></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media - div 35 -->
+                    <div class="mt-4">
+                        <h5><span class="social-title">Sosyal Medya</span></h5>
+                        <div class="social-icons">
+                            <a href="#" class="text-dark me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                            <a href="#" class="text-dark me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                            <a href="#" class="text-dark me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                            <a href="#" class="text-dark"><i class="fab fa-youtube fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Map Section - div 36 -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="mb-4 text-center"><span class="map-title">Bize</span> <span class="text-danger">Ulaşın</span></h3>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48153.30426842123!2d29.0244909745246!3d41.03348977888504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac790b17ba89d%3A0xd2d24ea0437a7ee2!2zS2FkxLFrw7Z5L8Swc3RhbmJ1bA!5e0!3m2!1str!2str!4v1652872735972!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Privacy Policy Modal - div 37 -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="privacyModalLabel"><span class="privacy-title">Kişisel Verilerin Korunması</span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><span class="privacy-text">MotorDünyası olarak kişisel verilerinizin gizliliğine önem veriyoruz. Bu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında hazırlanmıştır.</span></p>
+                    <p><span class="privacy-text">Formu doldurarak bizimle paylaştığınız kişisel verileriniz (ad, soyad, e-posta, telefon numarası vb.) talep ettiğiniz hizmetin sağlanması, sizinle iletişime geçilmesi ve yasal yükümlülüklerimizi yerine getirmek amacıyla işlenmektedir.</span></p>
+                    <p><span class="privacy-text">Kişisel verileriniz, hizmet sağlayıcılarımız ve yasal zorunluluk halinde yetkili kamu kurum ve kuruluşları dışında üçüncü kişilerle paylaşılmamaktadır.</span></p>
+                    <p><span class="privacy-text">KVKK'nın 11. maddesi kapsamında kişisel verilerinize ilişkin haklarınızı kullanmak için info@motordunyasi.com adresine e-posta gönderebilirsiniz.</span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Form Success Modal - div 38 -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="successModalLabel"><span class="success-title">Başarılı!</span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><span class="success-text">Mesajınız başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.</span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Tamam</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer - div 39 -->
+    <div class="footer">
+        <footer class="bg-dark text-white py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Col 1 - div 40 -->
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <h5><span class="footer-title">MotorDünyası</span></h5>
+                        <p><span class="footer-text">Motosiklet tutkunları için özel olarak tasarlanmış, yüksek performanslı ve güvenli motosikletler.</span></p>
+                        <div class="social-icons">
+                            <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Footer Col 2 - div 41 -->
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <h5><span class="footer-title">Hızlı Erişim</span></h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" class="text-white"><span class="footer-link">Ana Sayfa</span></a></li>
+                            <li><a href="index.html#modeller" class="text-white"><span class="footer-link">Modeller</span></a></li>
+                            <li><a href="index.html#karsilastirma" class="text-white"><span class="footer-link">Karşılaştırma</span></a></li>
+                            <li><a href="index.html#hakkimizda" class="text-white"><span class="footer-link">Hakkımızda</span></a></li>
+                            <li><a href="iletisim.html" class="text-white"><span class="footer-link">İletişim</span></a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Footer Col 3 - div 42 -->
+                    <div class="col-md-4">
+                        <h5><span class="footer-title">İletişim</span></h5>
+                        <ul class="list-unstyled">
+                            <li><span class="footer-contact"><i class="fas fa-map-marker-alt me-2"></i> Motosiklet Caddesi No:123, İstanbul</span></li>
+                            <li><span class="footer-contact"><i class="fas fa-phone me-2"></i> +90 212 345 67 89</span></li>
+                            <li><span class="footer-contact"><i class="fas fa-envelope me-2"></i> info@motordunyasi.com</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Copyright - div 43 -->
+                <div class="row mt-4">
+                    <div class="col-12 text-center">
+                        <p class="mb-0"><span class="copyright">© 2025 MotorDünyası. Tüm hakları saklıdır.</span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript Function 1: Update Budget Value Display
+        function updateBudgetValue(val) {
+            document.getElementById('budgetValue').innerHTML = `<span class="range-value">₺${parseInt(val).toLocaleString('tr-TR')}</span>`;
+        }
+        
+        // JavaScript Function 2: Form Validation
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const agreement = document.getElementById('agreement').checked;
+            
+            if (!name || !email || !subject || !message || !agreement) {
+                alert('Lütfen gerekli alanları doldurun!');
+                return false;
+            }
+            
+            // Basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Lütfen geçerli bir e-posta adresi girin!');
+                return false;
+            }
+            
+            return true;
+        }
+        
+        // JavaScript Function 3: Form Submission
+        function handleForm
